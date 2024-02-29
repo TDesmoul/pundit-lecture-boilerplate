@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+<div class="mb-4"><%= link_to "<< Back to restaurants", restaurants_path %></div>
+
+<div class="mb-4">
+  <%= render @restaurant %>
+  <div>This is the show of the restaurant.</div>
+</div>
+
+<div>
+  <%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant) %> | <%= link_to "Destroy this restaurant", @restaurant, data: { turbo_method: :delete }, class: 'text-danger' %>
+</div>
